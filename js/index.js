@@ -3,6 +3,7 @@ function rollDie(){
 var dieRoll = Math.floor((Math.random() * 6) + 1);
 return dieRoll;
  }
+ //rollDie generates a number between 1 and 6.
 function clearDie(){
   var element1 = document.getElementById("1");
   element1.classList.remove("dot");
@@ -24,6 +25,8 @@ function clearDie(){
   element9.classList.remove("dot");
   //if i were to do this in the futute i would put the elements in an array
   //and remove dot fot each member of the array.
+  // it is a function for removing the dot class from any div's with it when
+  //you roll a new number.
 }
 var die = rollDie();
 
@@ -32,6 +35,7 @@ if(die == 1){
   clearDie();
   var element = document.getElementById("5");
   element.classList.add("dot");
+  //adding a dot to the middle div to represent a 1 on a die.
 }else if(die == 2){
   console.log("2");
   clearDie();
@@ -87,5 +91,8 @@ if(die == 1){
   element4.classList.add("dot");
   element5.classList.add("dot");
   element6.classList.add("dot");
+  //I would have liked to do this more effiently aswell, maybe making a function
+  //for adding elements to get id'ed.
+  //this was me adding all the dots nessisary for each side of a die.
 }
 }
